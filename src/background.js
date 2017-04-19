@@ -2,19 +2,21 @@ var enabled = false;
 chrome.browserAction.onClicked.addListener(function () {
     if (enabled = !enabled) {
         chrome.browserAction.setIcon({
-            path: 'src/icon/icon128.png'
+            path: 'icon/icon128.png'
         });
+
+        alert('Deminify enabled! Please reload the page.');
     } else {
         chrome.browserAction.setIcon({
-            path: 'src/icongray/icongray128.png'
+            path: 'icongray/icongray128.png'
         });
     }
 });
 
 chrome.webRequest.onBeforeRequest.addListener(function (details) {
-    if (enabled && details.url) {
+    if (enabled) {
         return {
-            redirectUrl: details.url.replace('.min.css', '.css').replace('.min.js', '.js')
+            redirectUrl: 
         };
     }
 }, {
