@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Deminify",
+    "version": "0.0.0",
+    "description": "Google Chrome plugin to remove the '.min' from the file names loading the unminified version of the file (e.g. JavaScript and CSS files).",
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "browser_action": {
+        "default_icon": "icongray/icongray128.png"
+    },
+    "icons": {
+        "16": "icon/icon16.png",
+        "48": "icon/icon48.png",
+        "128": "icon/icon128.png",
+        "512": "icon/icon512.png"
+    },
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>"
+    ]
+}
