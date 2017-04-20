@@ -16,7 +16,7 @@ chrome.browserAction.onClicked.addListener(function () {
 chrome.webRequest.onBeforeRequest.addListener(function (details) {
     if (enabled) {
         return {
-            redirectUrl: details.replace('.min.css', '.css').replace('.min.js', '.js')
+            redirectUrl: details.url.replace('.min.css', '.css').replace('.min.js', '.js')
         };
     }
 }, {
