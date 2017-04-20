@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Deminify",
-    "version": "1.0.3",
+    "version": "1.1.0",
     "description": "Google Chrome plugin to remove the '.min' from the file names loading the unminified version of the file.",
     "background": {
         "scripts": ["background.js"]
