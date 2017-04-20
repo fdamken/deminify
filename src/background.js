@@ -15,9 +15,12 @@ chrome.browserAction.onClicked.addListener(function () {
 
 chrome.webRequest.onBeforeRequest.addListener(function (details) {
     if (enabled) {
-        return {
-            redirectUrl: details.url.replace('.min.css', '.css').replace('.min.js', '.js')
-        };
+        var url = details.url.replace('.min.css', '.css').replace('.min.js', '.js');
+        if (details.url !== url) {
+            return {
+                redirectUrl: url
+            };
+        }
     }
 }, {
     urls: [
